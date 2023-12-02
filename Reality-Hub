@@ -124,7 +124,6 @@ local portalWorlds = {
 	hxhant_infinite = 'Ant Kingdom (Summer)',
 	opm_infinite = 'Alien Spaceship (Underwater)',
 	eclipse_portal = 'The Eclipse',
-
 }
 
 local Bonuses = {
@@ -385,13 +384,8 @@ local macroMapList = {
 		'Virtual Dungeon',
 		'Ghoul City',
 		'Puppet Island',
-		'Undead Tomb',
-        'Planet Namek (Haunted)',
-        'Marine Ford (Haunted)',
-        'Magic Town (Haunted)',
-        'Clover Kingdom (Haunted)',
-        'Birazze Town (Haunted)',
-        "Shinganshinu District (Haunted)"
+		'Undead Tomb'
+
 
 	};
 
@@ -409,7 +403,8 @@ local macroMapList = {
 		'Storm Hideout',
 		'Storm Hideout (Final)',
 		'West City',
-		'Bizzare Town',  
+		'Bizzare Town',
+
 		'Hidden Sand Village',
 		'Shiganshinu District',
 		'Undead Tomb'
@@ -427,9 +422,8 @@ local macroMapList = {
 		'Fabled Kingdom (Cube)',
 		'The Eclipse',
 		'Alien Spaceship (Final)',
-		'Puppet Island (Birdcage)',
-        'Port Agency'
-        'Holy Grail War'
+		'Puppet Island (Birdcage)'
+
 	};
 
 	['Other'] = {
@@ -602,7 +596,7 @@ HubTitle.ZIndex = 10001
 HubTitle.Font = Enum.Font.GothamBlack
 HubTitle.TextColor3 = Color3.fromRGB(255,255,255)
 HubTitle.TextScaled = true
-HubTitle.Text = 'REALITY HUB - BETA'
+HubTitle.Text = 'Reality HUB - BETA'
 
 
 TopBarSizes = {
@@ -2325,12 +2319,12 @@ TestWebhook.MouseButton1Click:Connect(function()
 				["title"] = 'Anime Adventures',
 				['color'] = 11513855,
 				['footer'] = {
-					['text'] = string.format("// Poop by Reality Hub (%s)", Time), 
+					['text'] = string.format("// Made by Reality Hub (%s)", Time), 
 				},
 				['fields'] = {
 					{
 						['name'] = 'Test Webhook',
-						['value'] = 'Hi!'
+						['value'] = 'Hi! <3'
 					}
 				}
 
@@ -4338,14 +4332,13 @@ end)
 
 if GetSave('Hide Map') then Hide_Map(true) HideMap.Parent.BackgroundColor3 = checkBoxColors[true] end
 
-local RareDrop = {"Zid"}
+local RareDrop = {"Sea God's Portal"}
 
 local oldPlayerStats = {
 	Gems = player._stats.gem_amount.Value,
 	Gold = player._stats.gold_amount.Value,
 	Pearls = player._stats._resourceSummerPearls.Value,
 	PlayerXP = player._stats.player_xp.Value,
-    Candies = player._stats.resourceCandies.Value,
 }
 
 local contentNewSecretItem = ""
@@ -4369,8 +4362,7 @@ local function webhook ()
 		{name = 'Gems', amount = player._stats.gem_amount.Value - oldPlayerStats.Gems},
 		{name = 'Gold', amount = player._stats.gold_amount.Value - oldPlayerStats.Gold},
 		{name = 'Summer Pearls', amount = player._stats._resourceSummerPearls.Value - oldPlayerStats.Pearls},
-        {name = 'Halloween Candies', amount = player._stats._resourceHalloweenCandies.Value - oldPlayerStats.Candies},
-        
+
 	}
 
 	local newItemsData = getItemsData()
@@ -4399,7 +4391,6 @@ local function webhook ()
 	local TotalGems = makeComma(player._stats.gem_amount.Value)
 	local TotalGold = makeComma(player._stats.gold_amount.Value)
 	local TotalPearl = makeComma(player._stats._resourceSummerPearls.Value)
-    local TotalCandies = makeComma(player._stats._resourceHalloweenCandies.Value)
 	local BattlePass = ''
 	local reachedTier = 0
 	local reachedTierExp = 0
@@ -4467,7 +4458,7 @@ local function webhook ()
 				['fields'] = {
 					{
 						['name'] = "Player Stats",
-						['value'] = string.format( "<:Gems:1148368507029950515> %s\n<:Gold:1148368511463338074> %s\n<:Candies:1180499816007073897> %s\n:tickets: Tier: %s", TotalGems, TotalGold, TotalCandies, BattlePass ),
+						['value'] = string.format( "<:Gems:1148368507029950515> %s\n<:Gold:1148368511463338074> %s\n<:Pearls:1148369019137708193> %s\n:tickets: Tier: %s", TotalGems, TotalGold, TotalPearl, BattlePass),
 						['inline'] = true
 					},
 
