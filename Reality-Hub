@@ -124,6 +124,7 @@ local portalWorlds = {
 	hxhant_infinite = 'Ant Kingdom (Summer)',
 	opm_infinite = 'Alien Spaceship (Underwater)',
 	eclipse_portal = 'The Eclipse',
+    fate_portal =  'Noble Portal'
 }
 
 local Bonuses = {
@@ -384,8 +385,13 @@ local macroMapList = {
 		'Virtual Dungeon',
 		'Ghoul City',
 		'Puppet Island',
-		'Undead Tomb'
-
+		'Undead Tomb',
+        'Planet Namek ( Haunted )',
+        'Shiganshinu District ( Haunted)',
+        'Clover Kingdom ( Haunted )',
+        'Marine Ford ( Haunted )',
+        'Magic Town ( Haunted )',
+        'Birazze Town ( Haunted )'
 
 	};
 
@@ -404,7 +410,6 @@ local macroMapList = {
 		'Storm Hideout (Final)',
 		'West City',
 		'Bizzare Town',
-
 		'Hidden Sand Village',
 		'Shiganshinu District',
 		'Undead Tomb'
@@ -422,7 +427,8 @@ local macroMapList = {
 		'Fabled Kingdom (Cube)',
 		'The Eclipse',
 		'Alien Spaceship (Final)',
-		'Puppet Island (Birdcage)'
+		'Puppet Island (Birdcage)',
+        'Port Agency'
 
 	};
 
@@ -596,7 +602,7 @@ HubTitle.ZIndex = 10001
 HubTitle.Font = Enum.Font.GothamBlack
 HubTitle.TextColor3 = Color3.fromRGB(255,255,255)
 HubTitle.TextScaled = true
-HubTitle.Text = 'Reality HUB - BETA'
+HubTitle.Text = 'REALITY HUB - BETA'
 
 
 TopBarSizes = {
@@ -2323,8 +2329,8 @@ TestWebhook.MouseButton1Click:Connect(function()
 				},
 				['fields'] = {
 					{
-						['name'] = 'Test Webhook',
-						['value'] = 'Hi! <3'
+						['name'] = 'Noobs',
+						['value'] = 'Hi!'
 					}
 				}
 
@@ -4332,7 +4338,7 @@ end)
 
 if GetSave('Hide Map') then Hide_Map(true) HideMap.Parent.BackgroundColor3 = checkBoxColors[true] end
 
-local RareDrop = {"Sea God's Portal"}
+local RareDrop = {"Startea God's PortalS"}
 
 local oldPlayerStats = {
 	Gems = player._stats.gem_amount.Value,
