@@ -4494,7 +4494,7 @@ task.spawn(function()
 	pcall(function()
 
 		if queue_on_teleport then
-			local RealityHubSCRIPT = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Realityhub7/Reality-Hub/main/Main.lua"))()'
+			local RealityHubSCRIPT = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/RiayReality/RiayReality/main/Reality-Hub"))()'
 			queue_on_teleport(RealityHubSCRIPT)
 		end
 
