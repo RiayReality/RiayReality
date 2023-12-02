@@ -429,6 +429,7 @@ local macroMapList = {
 		'Alien Spaceship (Final)',
 		'Puppet Island (Birdcage)',
         'Port Agency'
+        'Holy Grail War'
 	};
 
 	['Other'] = {
@@ -2324,12 +2325,12 @@ TestWebhook.MouseButton1Click:Connect(function()
 				["title"] = 'Anime Adventures',
 				['color'] = 11513855,
 				['footer'] = {
-					['text'] = string.format("// Made by Reality Hub (%s)", Time), 
+					['text'] = string.format("// Poop by Reality Hub (%s)", Time), 
 				},
 				['fields'] = {
 					{
 						['name'] = 'Test Webhook',
-						['value'] = 'Hi! <3'
+						['value'] = 'Hi!'
 					}
 				}
 
@@ -4368,7 +4369,8 @@ local function webhook ()
 		{name = 'Gems', amount = player._stats.gem_amount.Value - oldPlayerStats.Gems},
 		{name = 'Gold', amount = player._stats.gold_amount.Value - oldPlayerStats.Gold},
 		{name = 'Summer Pearls', amount = player._stats._resourceSummerPearls.Value - oldPlayerStats.Pearls},
-
+        {name = 'Halloween Candies', amount = player._stats._resourceHalloweenCandies.Value - oldPlayerStats.Candies},
+        
 	}
 
 	local newItemsData = getItemsData()
@@ -4397,6 +4399,7 @@ local function webhook ()
 	local TotalGems = makeComma(player._stats.gem_amount.Value)
 	local TotalGold = makeComma(player._stats.gold_amount.Value)
 	local TotalPearl = makeComma(player._stats._resourceSummerPearls.Value)
+    local TotalCandies = makeComma(player._stats._resourceHalloweenCandies.Value)
 	local BattlePass = ''
 	local reachedTier = 0
 	local reachedTierExp = 0
@@ -4464,7 +4467,7 @@ local function webhook ()
 				['fields'] = {
 					{
 						['name'] = "Player Stats",
-						['value'] = string.format( "<:Gems:1148368507029950515> %s\n<:Gold:1148368511463338074> %s\n<:Pearls:1148369019137708193> %s\n:tickets: Tier: %s", TotalGems, TotalGold, TotalPearl, BattlePass),
+						['value'] = string.format( "<:Gems:1148368507029950515> %s\n<:Gold:1148368511463338074> %s\n<:Candies:1180499816007073897> %s\n:tickets: Tier: %s", TotalGems, TotalGold, TotalCandies, BattlePass ),
 						['inline'] = true
 					},
 
