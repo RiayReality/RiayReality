@@ -124,6 +124,7 @@ local portalWorlds = {
 	hxhant_infinite = 'Ant Kingdom (Summer)',
 	opm_infinite = 'Alien Spaceship (Underwater)',
 	eclipse_portal = 'The Eclipse',
+
 }
 
 local Bonuses = {
@@ -384,8 +385,13 @@ local macroMapList = {
 		'Virtual Dungeon',
 		'Ghoul City',
 		'Puppet Island',
-		'Undead Tomb'
-
+		'Undead Tomb',
+        'Planet Namek (Haunted)',
+        'Marine Ford (Haunted)',
+        'Magic Town (Haunted)',
+        'Clover Kingdom (Haunted)',
+        'Birazze Town (Haunted)',
+        "Shinganshinu District (Haunted)"
 
 	};
 
@@ -403,8 +409,7 @@ local macroMapList = {
 		'Storm Hideout',
 		'Storm Hideout (Final)',
 		'West City',
-		'Bizzare Town',
-
+		'Bizzare Town',  
 		'Hidden Sand Village',
 		'Shiganshinu District',
 		'Undead Tomb'
@@ -422,8 +427,8 @@ local macroMapList = {
 		'Fabled Kingdom (Cube)',
 		'The Eclipse',
 		'Alien Spaceship (Final)',
-		'Puppet Island (Birdcage)'
-
+		'Puppet Island (Birdcage)',
+        'Port Agency'
 	};
 
 	['Other'] = {
@@ -596,7 +601,7 @@ HubTitle.ZIndex = 10001
 HubTitle.Font = Enum.Font.GothamBlack
 HubTitle.TextColor3 = Color3.fromRGB(255,255,255)
 HubTitle.TextScaled = true
-HubTitle.Text = 'Reality HUB - BETA'
+HubTitle.Text = 'REALITY HUB - BETA'
 
 
 TopBarSizes = {
@@ -4332,13 +4337,14 @@ end)
 
 if GetSave('Hide Map') then Hide_Map(true) HideMap.Parent.BackgroundColor3 = checkBoxColors[true] end
 
-local RareDrop = {"Sea God's Portal"}
+local RareDrop = {"Zid"}
 
 local oldPlayerStats = {
 	Gems = player._stats.gem_amount.Value,
 	Gold = player._stats.gold_amount.Value,
 	Pearls = player._stats._resourceSummerPearls.Value,
 	PlayerXP = player._stats.player_xp.Value,
+    Candies = player._stats.resourceCandies.Value,
 }
 
 local contentNewSecretItem = ""
@@ -4494,7 +4500,7 @@ task.spawn(function()
 	pcall(function()
 
 		if queue_on_teleport then
-			local RealityHubSCRIPT = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/RiayReality/RiayReality/main/Reality-Hub"))()'
+			local RealityHubSCRIPT = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Realityhub7/Reality-Hub/main/Main.lua"))()'
 			queue_on_teleport(RealityHubSCRIPT)
 		end
 
